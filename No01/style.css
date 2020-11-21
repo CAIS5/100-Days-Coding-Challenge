@@ -48,11 +48,13 @@ h1 {
   justify-items: center;
 }
 
-.thumbnail {
+img {
+  object-fit: cover;
   margin-top: 5px;
   display: block;
   width: 120px;
   height: 120px;
+  transition: width 1.5s, height 1s, top 2s , left 2s;
 }
 
 .thumbnail:focus,
@@ -60,4 +62,12 @@ h1 {
   -webkit-box-shadow: 1px 1px 3px 2px #000000;
   box-shadow: 1px 1px 3px 2px #000000;
   cursor: pointer;
+}
+
+.enlarge{
+  position: absolute;
+  width:380px;
+  height:380px;
+  top : 0;
+  left: 5px;
 }
