@@ -1,0 +1,153 @@
+/* ascii art generator : ANSI Shadow */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --frame-duration: 1500ms;
+}
+
+body {
+    background: linear-gradient(225deg, #8c5454, #d58181);
+}
+
+/***************************************************** 
+**    ███████╗███████╗████████╗██╗   ██╗██████╗     **
+**    ██╔════╝██╔════╝╚══██╔══╝██║   ██║██╔══██╗    **
+**    ███████╗█████╗     ██║   ██║   ██║██████╔╝    **
+**    ╚════██║██╔══╝     ██║   ██║   ██║██╔═══╝     **
+**    ███████║███████╗   ██║   ╚██████╔╝██║         **
+**    ╚══════╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝         **
+******************************************************/
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    overflow: hidden;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    -webkit-transition: border-radius 1s;
+     -o-transition: border-radius 1s;
+     transition: border-radius 1s;
+    background: -o-linear-gradient(225deg, #8c5454, #d58181);
+    background: linear-gradient(225deg, #8c5454, #d58181);
+    -webkit-box-shadow: -26px 26px 81px #2b1a1a,
+        26px -26px 81px #734444;
+            box-shadow: -26px 26px 81px #2b1a1a,
+        26px -26px 81px #734444;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.isClicked {
+    border-radius: 50%;
+    background: -o-linear-gradient(225deg, #553232, #472a2a);
+    background: linear-gradient(225deg, #553232, #472a2a);
+    -webkit-box-shadow: inset -26px 26px 81px #2b1a1a,
+    inset 26px -26px 81px #734444;
+            box-shadow: inset -26px 26px 81px #2b1a1a,
+    inset 26px -26px 81px #734444;
+}
+
+/********************************************* 
+**    ██████╗  ██████╗ ██████╗ ██╗   ██╗    **    
+**    ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝    **    
+**    ██████╔╝██║   ██║██║  ██║ ╚████╔╝     **
+**    ██╔══██╗██║   ██║██║  ██║  ╚██╔╝      **
+**    ██████╔╝╚██████╔╝██████╔╝   ██║       **
+**    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝       **
+ ********************************************/
+ h1{
+     text-align: center;
+     font-family: 'Xanh Mono', monospace;
+     font-weight: 400;
+     font-size: 5em;
+     color: #fff;
+ }
+.circle {
+    background: #f9e7d9;
+    border-radius: 50%;
+}
+
+.shadow{
+    -webkit-box-shadow : 1px 1px 15px 5px hsla(0, 7%, 11%, 0.811);
+    box-shadow : 1px 1px 15px 5px hsla(0, 7%, 11%, 0.811);
+}
+
+.top {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 100px;
+    z-index: 3;
+    animation: scaleMiddle var(--frame-duration) infinite ease-in-out alternate;
+}
+
+.middle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+    animation: scaleMiddle var(--frame-duration) infinite ease-in-out alternate;
+}
+
+.bottom {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    animation: scaleBottom var(--frame-duration) infinite ease-in-out alternate;
+}
+
+
+@keyframes scaleTop {
+
+    0%,
+    40% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes scaleMiddle {
+
+    0%,
+    20% {
+        transform: scale(0);
+    }
+
+    90% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleBottom {
+    0% {
+        transform: scale(0);
+    }
+
+    80%,
+    100% {
+        transform: scale(1);
+    }
+}
