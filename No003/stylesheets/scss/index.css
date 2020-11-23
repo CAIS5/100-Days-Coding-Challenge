@@ -1,0 +1,200 @@
+/********************
+***               ***
+***     SETUP     ***
+***               ***
+********************/
+body {
+  text-align: center;
+  font-family: "Xanh Mono", monospace;
+  background: #400080;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  background: #fff;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-shadow: 14px -14px 27px #310061, -14px 14px 27px #4f009f;
+          box-shadow: 14px -14px 27px #310061, -14px 14px 27px #4f009f;
+}
+
+/*******************
+***              ***
+***     BODY     ***
+***              ***
+********************/
+.pacman-intro {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  overflow: hidden;
+  background: #400080;
+}
+
+.pacman-introhover {
+  -webkit-animation: scaleDown 2s ease-in-out 2s linear infinite;
+          animation: scaleDown 2s ease-in-out 2s linear infinite;
+}
+
+.pacman {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 150px;
+  left: 150px;
+  fill: none;
+  stroke: #f4d146;
+  stroke-width: 50px;
+  stroke-dasharray: 157;
+  stroke-linecap: butt;
+  -webkit-animation: mouth 0.7s ease-in-out infinite;
+          animation: mouth 0.7s ease-in-out infinite;
+}
+
+.eye {
+  position: absolute;
+  fill: black;
+  width: 12px;
+  height: 12px;
+  top: 167px;
+  left: 204px;
+  -webkit-animation: eye 0.7s ease-in-out infinite;
+          animation: eye 0.7s ease-in-out infinite;
+}
+
+.dots {
+  position: absolute;
+  height: 14px;
+  width: 240px;
+  top: 193px;
+  left: 180px;
+  stroke: #f4d146;
+  stroke-width: 14px;
+  stroke-dasharray: 0px 50px;
+  stroke-linecap: round;
+  -webkit-animation: points 0.7s linear infinite;
+          animation: points 0.7s linear infinite;
+  stroke-dashoffset: 14;
+}
+
+.btn-start {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 0.8em 2em;
+  top: 285.71429px;
+  left: 133.33333px;
+}
+
+/************************
+***                   ***
+***     ANIMATION     ***
+***                   ***
+*************************/
+@-webkit-keyframes mouth {
+  0%,
+  100% {
+    stroke-dashoffset: 0;
+    -webkit-transform: rotate(0deg), translate3d(0, 0, 0);
+            transform: rotate(0deg), translate3d(0, 0, 0);
+  }
+  50% {
+    stroke-dashoffset: 39.25;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+@keyframes mouth {
+  0%,
+  100% {
+    stroke-dashoffset: 0;
+    -webkit-transform: rotate(0deg), translate3d(0, 0, 0);
+            transform: rotate(0deg), translate3d(0, 0, 0);
+  }
+  50% {
+    stroke-dashoffset: 39.25;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes eye {
+  0%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-6px, -3px, 0);
+            transform: translate3d(-6px, -3px, 0);
+  }
+}
+
+@keyframes eye {
+  0%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-6px, -3px, 0);
+            transform: translate3d(-6px, -3px, 0);
+  }
+}
+
+@-webkit-keyframes points {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    stroke-dashoffset: 70;
+  }
+}
+
+@keyframes points {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    stroke-dashoffset: 70;
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  0%, 20% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0), rotate(270deg);
+            transform: scale(0), rotate(270deg);
+  }
+}
+
+@keyframes scaleDown {
+  0%, 20% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0), rotate(270deg);
+            transform: scale(0), rotate(270deg);
+  }
+}
+/*# sourceMappingURL=index.css.map */

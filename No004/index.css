@@ -1,0 +1,66 @@
+/********************
+***               ***
+***     SETUP     ***
+***               ***
+********************/
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+
+body {
+    text-align: center;
+    font-family: "Xanh Mono", monospace;
+    background: #b8b8b8;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-shadow: 4px 4px 0 #7A7A7A;
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* background: #de3232; */
+    box-shadow: 15px 15px 55px #a3a3a3,
+        -15px -15px 55px #ffffff;
+}
+
+/*******************
+  ***              ***
+  ***     BODY     ***
+  ***              ***
+  ********************/
+.pixels {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pixel {
+    width: 20px;
+    height: 20px;
+    background: #de3232;
+    border: .5px solid #aeaeae9e;
+}
+
+.selected {
+    background: #ffffff;
+    box-shadow: inset 0px 0px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+}
