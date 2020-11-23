@@ -12,8 +12,9 @@
 
 body {
     text-align: center;
-    font-family: "Xanh Mono", monospace;
+
     background: #b8b8b8;
+    font-family: 'Nerko One', cursive;
 }
 
 h1 {
@@ -21,6 +22,7 @@ h1 {
     font-weight: 400;
     color: #FFFFFF;
     text-shadow: 4px 4px 0 #7A7A7A;
+    font-family: "Xanh Mono", monospace;
 }
 
 
@@ -46,75 +48,90 @@ h1 {
   ***     BODY     ***
   ***              ***
   ********************/
-  h2{
+h2 {
     font-weight: bold;
     font-size: 1.5rem;
     position: relative;
-    margin:0 auto;
-    color:#000000;
+    margin: 0 auto;
+    color: #000000;
 }
 
-h2:before{
-    content:'';
-    border-radius:48% 15% 10% 10% / 55% 100% 10% 25% ;
+h2:before {
+    content: '';
+    border-radius: 48% 15% 10% 10% / 55% 100% 10% 25%;
     position: absolute;
     height: 8px;
     width: 285px;
     bottom: 2px;
-    background :#3e3c3c;
+    background: #6360607b;
     z-index: -1;
 }
 
-.buble{
+.buble {
     display: block;
-    margin: 2em auto;
-    background:#fff;
-    width:80%;
-    height: 7em;
+    margin: 1.1em auto;
+    background: #fff;
+    width: 80%;
+    height: 6.5em;
     position: relative;
+    padding: 1.5em .8em;
 }
 
-.setup{
-    border-radius: 23% 12% 17% 10% / 76% 50% 50% 2% ;
-
+.setup {
+    border-radius: 23% 12% 17% 10% / 76% 50% 50% 2%;
+    font-size: 1.1rem;
+    font-family: 'Nerko One', cursive;
+    transition: font-size .5s linear;
+    text-align: center;
 }
 
-.setup:before{
-    content:"";
+.setup:before {
+    content: "";
     position: absolute;
-    background:#ae9494;
-    width:100%;
+    background: #ae9494;
+    width: 100%;
     top: 10px;
     left: 8px;
-    height:7em;
+    height: 6em;
     transform: rotate(2deg);
-    border-radius: 23% 12% 17% 10% / 76% 50% 50% 2% ;
-    z-index: -1;
-}
-.punchline{
-    border-radius:  15% 25% 17% 15% / 50% 58% 0% 50%;
-    /* box-shadow: 11px 11px 31px -11px #000000; */
-    
-}
-
-.punchline:before{
-    content:"";
-    position: absolute;
-    background:#ae9494;
-    width:100%;
-    top: 10px;
-    left: 8px;
-    height:7em;
-    transform: rotate(2deg);
-    border-radius:  15% 25% 17% 15% / 50% 58% 0% 50%;
+    border-radius: 23% 12% 17% 10% / 76% 50% 50% 2%;
     z-index: -1;
 }
 
-.btn{
+/* 
+.setup:hover,
+.punchline:hover{
+    font-size: 1.2rem;
+} */
+
+.punchline {
+    border-radius: 15% 25% 17% 15% / 50% 58% 0% 50%;
+    font-family: 'Nerko One', cursive;
+    padding: 1.5em .5em;
+    transition: font-size .5s linear;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.punchline:before {
+    content: "";
+    position: absolute;
+    background: #ae9494;
+    width: 100%;
+    top: 10px;
+    left: 8px;
+    height: 6em;
+    transform: rotate(2deg);
+    border-radius: 15% 25% 17% 15% / 50% 58% 0% 50%;
+    z-index: -1;
+}
+
+.btn {
+    margin-top: 1em;
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.5rem;
-    padding:.5em 1em;
+    padding: .5em 1em;
     width: 150px;
     border-radius: 15px;
     letter-spacing: 1px;
@@ -122,28 +139,33 @@ h2:before{
     text-transform: uppercase;
     background: -o-linear-gradient(305deg, #c5c5c5, #a6a6a6);
     background: linear-gradient(145deg, #c5c5c5, #a6a6a6);
-        -webkit-box-shadow:  4px 4px 11px #656565, 
-                 -4px -4px 11px #ffffff;
-                box-shadow:  4px 4px 11px #656565, 
-                 -4px -4px 11px #ffffff;
+    -webkit-box-shadow: 4px 4px 11px #656565,
+        -4px -4px 11px #ffffff;
+    box-shadow: 4px 4px 11px #656565,
+        -4px -4px 11px #ffffff;
 
-    transition: color fontSize .5s ease-in-out;
+    transition: color .5s ease-in-out,
+        font-size .5s linear;
 }
 
+.btn:hover {
+    color: #800101;
+    font-size: 1.4rem;
+}
 
-.hightlight{
+.hightlight {
     -webkit-box-shadow: 11px 11px 31px -11px #000000,
-    inset 11px 5px 156px -90px rgba(0,0,0,0.67);
-         box-shadow: 11px 11px 31px -11px #000000,
-    inset 11px 5px 156px -90px rgba(0,0,0,0.67);
+        inset 11px 5px 156px -90px rgba(0, 0, 0, 0.67);
+    box-shadow: 11px 11px 31px -11px #000000,
+        inset 11px 5px 156px -90px rgba(0, 0, 0, 0.67);
 }
 
-.btnClicked{
-    color:#800101;
-    font-size:1.4rem;
+.btnClicked {
+    color: #3a3030a1;
+    font-size: 1.4rem;
     background: #a6a6a6;
-    -webkit-box-shadow: inset 8px 8px 2px #838383, 
-                inset -8px -8px 2px #c9c9c9;
-            box-shadow: inset 8px 8px 2px #838383, 
-                inset -8px -8px 2px #c9c9c9;
+    -webkit-box-shadow: inset 8px 8px 2px #838383,
+        inset -8px -8px 2px #c9c9c9;
+    box-shadow: inset 8px 8px 2px #838383,
+        inset -8px -8px 2px #c9c9c9;
 }
