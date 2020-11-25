@@ -13,7 +13,7 @@
 body {
     text-align: center;
 
-    background: #b8b8b8;
+    background:#b8b8b8;
     font-family: 'Nerko One', cursive;
 }
 
@@ -39,8 +39,8 @@ h1 {
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    box-shadow: 15px 15px 55px #a3a3a3,
-        -15px -15px 55px #ffffff;
+    box-shadow: 5px 5px 15px #a3a3a3,
+        -5px -5px 15px #ffffff;
 }
 
 /*******************
@@ -139,10 +139,10 @@ h2:before {
     text-transform: uppercase;
     background: -o-linear-gradient(305deg, #c5c5c5, #a6a6a6);
     background: linear-gradient(145deg, #c5c5c5, #a6a6a6);
-    -webkit-box-shadow: 4px 4px 11px #656565,
-        -4px -4px 11px #ffffff;
-    box-shadow: 4px 4px 11px #656565,
-        -4px -4px 11px #ffffff;
+    -webkit-box-shadow: 2px 2px 9px #656565,
+        -2px -2px 9px #ffffff;
+    box-shadow: 2px 2px 9px #656565,
+        -2px -2px 9px #ffffff;
 
     transition: color .5s ease-in-out,
         font-size .5s linear;
