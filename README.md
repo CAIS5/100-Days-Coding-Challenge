@@ -10,4 +10,4 @@
 
 <strong>005 Random Jokes</strong> - https://100-days-coding-challenge-no005.netlify.app/
 
-###DICE : https://100-days-coding-challenge-no006.netlify.app/
+#006 : DICE : https://100-days-coding-challenge-no006.netlify.app/
