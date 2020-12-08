@@ -9,16 +9,16 @@
   box-sizing: border-box;
 }
 
-$SIZE: 320px;
+$SIZE: 400px;
 $FRAME-SIZE: 500px;
 $CENTER: 50;
 $white: #efe8e6;
 
 body {
-background:$white;
+  background: $white;
 
-font-family: 'Stardos Stencil', cursive;
-color:rgb(81, 46, 46);
+  font-family: "Stardos Stencil", cursive;
+  color: rgb(81, 46, 46);
 }
 
 .frame {
@@ -33,18 +33,17 @@ color:rgb(81, 46, 46);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
-#dice-face {
-    font-weight: 700;
-    text-align: center;
-    font-size: 5rem;
-    margin:20px auto;
+#title {
+  font-weight: 700;
+  text-align: center;
+  font-size: 5rem;
+  margin: 20px auto;
 }
 .dice {
-   
   .face {
     width: $SIZE;
     height: $SIZE;
@@ -54,13 +53,12 @@ color:rgb(81, 46, 46);
     padding: 40px;
     display: none;
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
-    box-shadow:  14px 14px 35px #8a8a8a, 
-                 -14px -14px 35px #ffffff;
- 
+    box-shadow: 14px 14px 35px #8a8a8a, -14px -14px 35px #ffffff;
+
     .dot {
       width: ($SIZE / 5);
       height: ($SIZE / 5);
-     
+
       background: radial-gradient(
         circle,
         #ffffff 0%,
@@ -69,14 +67,13 @@ color:rgb(81, 46, 46);
         #000000 72%
       );
 
-      box-shadow: inset 14px 14px 50px #000000, 
-            inset -14px -14px 50px $white;
+      box-shadow: inset 14px 14px 50px #000000, inset -14px -14px 50px $white;
       border-radius: 50%;
     }
   }
 
   .active {
-    display:flex;
+    display: flex;
     animation: wobble 0.8s ease-in-out;
   }
 

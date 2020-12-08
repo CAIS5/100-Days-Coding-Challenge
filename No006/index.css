@@ -10,7 +10,7 @@
 
 body {
   background: #efe8e6;
-  font-family: 'Stardos Stencil', cursive;
+  font-family: "Stardos Stencil", cursive;
   color: #512e2e; }
 
 .frame {
@@ -28,25 +28,25 @@ body {
   flex-direction: column-reverse;
   align-items: center; }
 
-#dice-face {
+#title {
   font-weight: 700;
   text-align: center;
   font-size: 5rem;
   margin: 20px auto; }
 
 .dice .face {
-  width: 320px;
-  height: 320px;
+  width: 400px;
+  height: 400px;
   border-radius: 20px;
   background: #efe8e6;
   border-radius: 40px;
   padding: 40px;
   display: none;
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  box-shadow: 14px 14px 35px #8a8a8a,  -14px -14px 35px #ffffff; }
+  box-shadow: 14px 14px 35px #8a8a8a, -14px -14px 35px #ffffff; }
   .dice .face .dot {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     background: radial-gradient(circle, #ffffff 0%, #bfbfbf 18%, #6c6c6c 36%, #000000 72%);
     box-shadow: inset 14px 14px 50px #000000, inset -14px -14px 50px #efe8e6;
     border-radius: 50%; }
