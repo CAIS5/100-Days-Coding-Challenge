@@ -1,0 +1,55 @@
+/********************
+***               ***
+***     SETUP     ***
+***               ***
+********************/
+*,
+*:after,
+*:before {
+  box-sizing: border-box; }
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-shadow: 5px 5px 15px #ba6363, -5px -5px 15px #524242; }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; }
+
+/********************
+***               ***
+***     BODY      ***
+***               ***
+********************/
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+img {
+  width: 133.33333px;
+  height: 500px;
+  object-fit: cover;
+  display: inline;
+  transition: width .8s linear; }
+
+img:hover {
+  width: 266.66667px; }

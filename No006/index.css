@@ -1,0 +1,111 @@
+/********************
+***               ***
+***     SETUP     ***
+***               ***
+********************/
+*,
+*:after,
+*:before {
+  box-sizing: border-box; }
+
+body {
+  background: #efe8e6;
+  font-family: 'Stardos Stencil', cursive;
+  color: #512e2e; }
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  margin-top: -250px;
+  margin-left: -250px;
+  border-radius: 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center; }
+
+#dice-face {
+  font-weight: 700;
+  text-align: center;
+  font-size: 5rem;
+  margin: 20px auto; }
+
+.dice .face {
+  width: 320px;
+  height: 320px;
+  border-radius: 20px;
+  background: #efe8e6;
+  border-radius: 40px;
+  padding: 40px;
+  display: none;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 14px 14px 35px #8a8a8a,  -14px -14px 35px #ffffff; }
+  .dice .face .dot {
+    width: 64px;
+    height: 64px;
+    background: radial-gradient(circle, #ffffff 0%, #bfbfbf 18%, #6c6c6c 36%, #000000 72%);
+    box-shadow: inset 14px 14px 50px #000000, inset -14px -14px 50px #efe8e6;
+    border-radius: 50%; }
+
+.dice .active {
+  display: flex;
+  animation: wobble 0.8s ease-in-out; }
+
+.dice .one-dot {
+  justify-content: center;
+  align-items: center; }
+
+.dice .two-dot {
+  justify-content: space-between; }
+  .dice .two-dot :nth-of-type(1) {
+    align-self: flex-end; }
+
+.dice .three-dot {
+  justify-content: space-between; }
+  .dice .three-dot :nth-of-type(2) {
+    align-self: center; }
+  .dice .three-dot :nth-of-type(3) {
+    align-self: flex-end; }
+
+.dice .four-dot {
+  justify-content: space-between; }
+  .dice .four-dot .cols {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+
+.dice .five-dot {
+  justify-content: space-between; }
+  .dice .five-dot :nth-of-type(2) {
+    align-self: center; }
+  .dice .five-dot .cols {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+
+.dice .six-dot {
+  justify-content: space-between; }
+  .dice .six-dot .cols {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+
+@keyframes wobble {
+  0% {
+    transform: translateX(0%); }
+  15% {
+    transform: translateX(-25%) rotate(-5deg); }
+  30% {
+    transform: translateX(20%) rotate(3deg); }
+  45% {
+    transform: translateX(-15%) rotate(-3deg); }
+  60% {
+    transform: translateX(10%) rotate(2deg); }
+  75% {
+    transform: translateX(-5%) rotate(-1deg); }
+  100% {
+    transform: translateX(0%); } }
