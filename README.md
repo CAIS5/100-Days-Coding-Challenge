@@ -11,3 +11,5 @@
 <strong>005 : Random Jokes</strong> - https://100-days-coding-challenge-no005.netlify.app/
 
 <strong>006 : Dice</strong>         - https://100-days-coding-challenge-no006.netlify.app/
+
+<strong>007 : Async/Promise </strong> - https://app.netlify.com/sites/100-days-coding-challenge-no007/settings/general
