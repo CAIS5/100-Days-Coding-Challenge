@@ -10,7 +10,7 @@
 }
 $FRAME: 600px;
 $SIZE: 400px;
-
+$TEXT : #6c63ff;
 .frame {
   position: absolute;
   top: 50%;
@@ -31,16 +31,16 @@ $SIZE: 400px;
   font-size: 3rem;
   font-family: "Stardos Stencil", cursive;
   text-align: center;
+  color:$TEXT;
 }
 
 .center {
-  border: 1px solid black;
   width: $SIZE;
   height: $SIZE;
   margin: 0 auto;
   border-radius: 20px;
   position: relative;
-  box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 0px 15px 5px hsla(0, 0%, 0%, 0.702);
 }
 
 /********************

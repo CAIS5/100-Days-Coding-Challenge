@@ -25,16 +25,16 @@
 #title {
   font-size: 3rem;
   font-family: "Stardos Stencil", cursive;
-  text-align: center; }
+  text-align: center;
+  color: #6c63ff; }
 
 .center {
-  border: 1px solid black;
   width: 400px;
   height: 400px;
   margin: 0 auto;
   border-radius: 20px;
   position: relative;
-  box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.7); }
+  box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.702); }
 
 /********************
 ***               ***
