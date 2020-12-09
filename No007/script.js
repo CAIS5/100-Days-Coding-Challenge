@@ -1,19 +1,39 @@
-const urls = ['https://images.unsplash.com/photo-1606644747534-f21b1e85b756?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
-'https://images.unsplash.com/photo-1496794795115-3247c050b08e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80',
-'https://images.unsplash.com/photo-1416163026265-0bc340a710e4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80'
-]
+const SLIDER = document.querySelector('.slider');
 
-
-
-const imgs = document.querySelectorAll('img')
-let i = 0;
-
-for(let img of imgs){
-    img.src = urls[i]
-    i++;
-
-    img.addEventListener('mouseover', event => {
-        document.querySelector('body').style.backgroundImage = `url(${img.src})`;
-        console.log(img.src)
-    })
+async function getPhotos() {
+    let response = await fetch("photos.json");
+    let photos = await response.json();
+    console.log(photos);
+    return photos;
 }
+
+function getPhotosHtml(photos) {
+    let myPhotosHtml = photos.map(photo => {
+        return `<img class="my-photo" src="https://picsum.photos/id/${photo.id}/400/400" alt="${photo.title}"/>`
+    }).join('')
+    
+    return `<div class="my-photos">${myPhotosHtml}</div>`   
+}
+
+getPhotos().then(photos => {
+    SLIDER.innerHTML = 
+    `<div class="my-gallery">
+        ${getPhotosHtml(photos)}
+    </div>`;
+    const center = document.querySelector('.center')
+    const images = Array.from(document.querySelectorAll('.my-photo'));
+//default photo;
+    center.style.background = `url(${images[2].src})`;
+    let title = `<h3 id="img-title">${images[2].alt}</h3>`;
+    center.innerHTML = title;
+
+   images.forEach(img => {
+       img.addEventListener('click', e => {
+           let src = e.target.src;
+           title = `<h3 id="img-title">${e.target.alt}</h3>`;
+           center.style.background = `url(${src})`;
+           center.innerHTML = title;
+       });
+ 
+   });
+})

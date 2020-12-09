@@ -6,67 +6,82 @@
 *,
 *:after,
 *:before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-$SIZE : 400px;
-$CENTER : 50;
-$color:#ba6363 ;
-$light-shade :  #524242;
+$FRAME: 600px;
+$SIZE: 400px;
 
 .frame {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: $SIZE;
-    height: $SIZE;
-    margin-top: -($SIZE / 2);
-    margin-left: -($SIZE / 2);
-    border-radius: 50%;
-    overflow: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    box-shadow: 5px 5px 15px $color,
-        -5px -5px 15px $light-shade;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $FRAME;
+  height: $FRAME;
+  margin-top: -($FRAME / 2);
+  margin-left: -($FRAME / 2);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // border: 1px solid black;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 41px 41px 100px #8c8c8c, -41px -41px 100px #ffffff;
+}
+
+#title {
+  font-size: 3rem;
+  font-family: "Stardos Stencil", cursive;
+  text-align: center;
 }
 
 .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display:flex;
+  border: 1px solid black;
+  width: $SIZE;
+  height: $SIZE;
+  margin: 0 auto;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.7);
 }
-
 
 /********************
 ***               ***
 ***     BODY      ***
 ***               ***
 ********************/
-body{
-    margin: 0;
-    padding:0;
-    overflow: hidden;
-    width: 100vw;
-    height:100vh;
-    background-position: center; 
-    background-size: cover;
-    background-repeat: no-repeat;
-  
+
+.slider {
+  width: $SIZE;
+  //  border:1px solid black;
+  height: 50px;
+  margin: 5px auto;
+
+  .my-photos {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .my-photo {
+      border-radius: 50%;
+      margin: 8px;
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
-img{
-    width: $SIZE / 3 ;
-    height: 500px;
-    object-fit:cover;
-    display:inline;
-    transition: width .8s linear;
+.my-photo:hover,
+.my-photo:focus,
+.my-photo:active {
+  transform: scale(1.5);
 }
 
-
-
-img:hover{
-    width: $SIZE / 1.5;
+#img-title {
+  text-transform: uppercase;
+  position: absolute;
+  color: #ffffff;
+  top: 300px;
+  width: 350px;
+  left: 25px;
+  text-align: center;
 }
-
-

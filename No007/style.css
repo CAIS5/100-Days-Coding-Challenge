@@ -12,44 +12,60 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
-  height: 400px;
-  margin-top: -200px;
-  margin-left: -200px;
-  border-radius: 50%;
+  width: 600px;
+  height: 600px;
+  margin-top: -300px;
+  margin-left: -300px;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-shadow: 5px 5px 15px #ba6363, -5px -5px 15px #524242; }
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 41px 41px 100px #8c8c8c, -41px -41px 100px #ffffff; }
+
+#title {
+  font-size: 3rem;
+  font-family: "Stardos Stencil", cursive;
+  text-align: center; }
 
 .center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex; }
+  border: 1px solid black;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.7); }
 
 /********************
 ***               ***
 ***     BODY      ***
 ***               ***
 ********************/
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+.slider {
+  width: 400px;
+  height: 50px;
+  margin: 5px auto; }
+  .slider .my-photos {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .slider .my-photos .my-photo {
+      border-radius: 50%;
+      margin: 8px;
+      width: 30px;
+      height: 30px; }
 
-img {
-  width: 133.33333px;
-  height: 500px;
-  object-fit: cover;
-  display: inline;
-  transition: width .8s linear; }
+.my-photo:hover,
+.my-photo:focus,
+.my-photo:active {
+  transform: scale(1.5); }
 
-img:hover {
-  width: 266.66667px; }
+#img-title {
+  text-transform: uppercase;
+  position: absolute;
+  color: #ffffff;
+  top: 300px;
+  width: 350px;
+  left: 25px;
+  text-align: center; }
